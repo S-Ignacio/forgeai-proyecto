@@ -1,4 +1,3 @@
--- FORGE AI - esquema MySQL (basado en tu modelo relacional, con AUTO_INCREMENT y CASCADE)
 CREATE DATABASE IF NOT EXISTS forge_ai DEFAULT CHARACTER SET utf8mb4;
 USE forge_ai;
 
@@ -93,7 +92,7 @@ CREATE TABLE IF NOT EXISTS Agentes_herramientas (
   CONSTRAINT fk_Agentes_has_Herramientas_Herramientas1 FOREIGN KEY (Herramientas_id_herramienta) REFERENCES Herramientas (id_herramienta) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- Datos iniciales
+
 INSERT INTO Planes (nombre, precio, duracion_meses, limite_agentes, limite_acciones) VALUES
   ('Gratis', 0, 12, 3, 100),
   ('Pro', 19, 1, 20, 5000);
