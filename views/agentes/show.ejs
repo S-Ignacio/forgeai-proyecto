@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<div class="row"><h1><%= agente.nombre %></h1><a class="btn btn-ghost" href="/agentes">← Volver</a></div>
+<div class="card">
+  <p><%= agente.descripcion %></p>
+  <p><span class="tag"><%= agente.estado %></span> <span class="tag"><%= agente.nombre_modelo %></span>
+  <% if (agente.soporte_obsidian) { %><span class="tag">Obsidian</span><% } %></p>
+  <h3>Herramientas</h3>
+  <% if (herramientas.length === 0) { %><p class="muted">Sin herramientas asignadas.</p><% } %>
+  <% herramientas.forEach(h => { %><span class="tag"><%= h.nombre %> · <%= h.nivel_permiso %></span> <% }) %>
+</div>
+<div class="card">
+  <h3>Nueva tarea</h3>
+  <form action="/agentes/<%= agente.id_agente %>/tareas" method="POST">
+    <label>Solicitud<textarea name="descripcion" rows="2" required></textarea></label>
+    <label>Prioridad
+      <select name="prioridad"><option>baja</option><option selected>media</option><option>alta</option></select>
+    </label>
+    <label class="check"><input type="checkbox" name="requiere_aprobacion"> Requiere aprobación humana</label>
+    <button class="btn" type="submit">Crear tarea</button>
+  </form>
+</div>
+<div class="grid">
+  <div class="card"><h3>Tareas</h3>
+    <% if (tareas.length === 0) { %><p class="muted">Sin tareas.</p><% } %>
+    <% tareas.forEach(t => { %>
+      <p><strong><%= t.prioridad %></strong> — <%= t.descripcion_solicitud %> <% if (t.requiere_aprobacion) { %><span class="tag">aprobación</span><% } %></p>
+    <% }) %>
+  </div>
+  <div class="card"><h3>Historial de auditoría</h3>
+    <% if (auditoria.length === 0) { %><p class="muted">Sin registros.</p><% } %>
+    <% auditoria.forEach(a => { %>
+      <p><strong><%= a.accion_realizada %></strong><br><span class="muted"><%= a.detalle_ejecucion %> · <%= new Date(a.fecha_ejecucion).toLocaleString('es-CL') %></span></p>
+    <% }) %>
+  </div>
+</div>
+<%- include('../partials/footer') %>

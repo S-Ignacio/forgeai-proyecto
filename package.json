@@ -1,0 +1,25 @@
+{
+  "name": "forgeai",
+  "version": "1.0.0",
+  "description": "ForgeAI - plataforma de agentes de IA (Node.js + Express + MVC + MySQL)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.10",
+    "express": "^4.22.3",
+    "express-session": "^1.19.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.24.5"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

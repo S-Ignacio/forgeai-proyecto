@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> — ForgeAI</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header class="app-header">
+  <a class="logo" href="/">forge<span>ai</span></a>
+  <nav>
+    <% if (user) { %>
+      <a href="/agentes">Mis agentes</a>
+      <span class="hello">Hola, <%= user.nombre %></span>
+      <form action="/logout" method="POST" class="inline"><button class="btn btn-ghost">Salir</button></form>
+    <% } else { %>
+      <a href="/login">Iniciar sesión</a>
+      <a class="btn" href="/registro">Comenzar gratis</a>
+    <% } %>
+  </nav>
+</header>
+<main class="container">

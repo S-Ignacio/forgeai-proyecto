@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Descubre agentes de IA que te ayudan a investigar, crear y automatizar tareas con ForgeAI.">
+  <title>ForgeAI — Agentes que trabajan contigo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="ForgeAI, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 29 10.5v11L16 29 3 21.5v-11L16 3Z"/><path d="M11 21V11h11M11 16h8"/></svg></span>
+      <span>forge<span class="brand-light">ai</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#agentes">Agentes</a><a href="#como-funciona">Cómo funciona</a><a href="#ventajas">Ventajas</a>
+      <div class="nav-actions"><a class="login-link" href="/login">Iniciar sesión</a><a class="button button-small" href="/registro">Comenzar gratis <span>↗</span></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> TU EQUIPO, CON INTELIGENCIA ARTIFICIAL</div>
+        <h1>Menos tareas.<br>Más <span class="gradient-text">posibilidades.</span></h1>
+        <p class="hero-lead">Conoce agentes de IA que te ayudan a investigar, crear y organizar tu trabajo. Tú decides qué hacer; ellos te ayudan a hacerlo mejor.</p>
+        <div class="hero-actions"><a class="button" href="/registro">Explorar ForgeAI <span>↗</span></a><a class="text-button" href="#agentes"><span class="play-icon">↓</span> Conoce los agentes</a></div>
+        <div class="trust-row"><div class="avatar-stack" aria-hidden="true"><span>F</span><span>A</span><span>I</span><span>+</span></div><p>Una nueva forma de trabajar<br><strong>con ayuda de la IA</strong></p></div>
+      </div>
+      <div class="hero-visual" aria-label="Vista previa del espacio de trabajo de ForgeAI">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="spark spark-a">✳</div><div class="spark spark-b">✦</div>
+        <div class="workspace-card">
+          <div class="workspace-top"><div class="window-dots"><i></i><i></i><i></i></div><span>forgeai / workspace</span><span class="top-status"><b></b> En línea</span></div>
+          <div class="workspace-body">
+            <div class="workspace-label">TU ESPACIO DE TRABAJO</div>
+            <h3>Hola, ¿qué creamos<br>hoy?</h3>
+            <div class="prompt-box"><span>✧</span><span>Describe una tarea para comenzar...</span><kbd>↵</kbd></div>
+            <div class="agent-label">AGENTES DISPONIBLES <span>03</span></div>
+            <div class="mini-agents"><div class="mini-agent"><span class="mini-icon purple">✳</span><span><b>Nova</b><small>Investigación</small></span><i></i></div><div class="mini-agent"><span class="mini-icon blue">✎</span><span><b>Pixel</b><small>Contenido</small></span><i></i></div><div class="mini-agent"><span class="mini-icon orange">⌘</span><span><b>Atlas</b><small>Organización</small></span><i></i></div></div>
+          </div>
+        </div>
+        <div class="float-chip chip-top"><span>✦</span> Ideas en movimiento</div><div class="float-chip chip-bottom"><span class="chip-check">✓</span> Tu próximo proyecto empieza aquí</div>
+      </div>
+    </section>
+
+    <section class="marquee-strip" aria-label="Lo que puedes hacer"><div class="marquee-content"><span>INVESTIGA MEJOR</span><i>✳</i><span>CREA MÁS RÁPIDO</span><i>✳</i><span>ORGANIZA TUS IDEAS</span><i>✳</i><span>AUTOMATIZA LO REPETITIVO</span><i>✳</i><span>INVESTIGA MEJOR</span><i>✳</i><span>CREA MÁS RÁPIDO</span><i>✳</i><span>ORGANIZA TUS IDEAS</span><i>✳</i><span>AUTOMATIZA LO REPETITIVO</span><i>✳</i></div></section>
+
+    <section class="agents-section section-wrap" id="agentes">
+      <div class="section-heading"><div><div class="eyebrow">CONOCE A TU EQUIPO</div><h2>Un agente para cada<br><span class="muted-heading">gran idea.</span></h2></div><p>Elige el tipo de ayuda que necesitas y empieza a avanzar. Cada agente tiene una especialidad.</p></div>
+      <div class="filter-row" role="group" aria-label="Filtrar agentes"><button class="filter-button active" data-filter="todos">Todos <span>04</span></button><button class="filter-button" data-filter="crear">Creatividad</button><button class="filter-button" data-filter="analizar">Análisis</button><button class="filter-button" data-filter="organizar">Productividad</button></div>
+      <div class="agent-grid">
+        <article class="agent-card card-purple" data-category="analizar"><div class="card-top"><span class="agent-symbol">✳</span><span class="card-arrow">↗</span></div><span class="agent-type">INVESTIGACIÓN</span><h3>Nova</h3><p>Encuentra información, resume fuentes y te ayuda a entender temas complejos.</p><div class="card-bottom"><span>Ideal para aprender</span><span class="tiny-dot"></span></div></article>
+        <article class="agent-card card-blue" data-category="crear"><div class="card-top"><span class="agent-symbol">✎</span><span class="card-arrow">↗</span></div><span class="agent-type">CREACIÓN</span><h3>Pixel</h3><p>Convierte tus ideas en textos claros, guiones y publicaciones listas para revisar.</p><div class="card-bottom"><span>Ideal para crear</span><span class="tiny-dot"></span></div></article>
+        <article class="agent-card card-orange" data-category="organizar"><div class="card-top"><span class="agent-symbol">⌘</span><span class="card-arrow">↗</span></div><span class="agent-type">ORGANIZACIÓN</span><h3>Atlas</h3><p>Ordena pendientes, divide proyectos en pasos y ayuda a mantener el rumbo.</p><div class="card-bottom"><span>Ideal para planificar</span><span class="tiny-dot"></span></div></article>
+        <article class="agent-card card-green" data-category="analizar"><div class="card-top"><span class="agent-symbol">⌁</span><span class="card-arrow">↗</span></div><span class="agent-type">DATOS</span><h3>Echo</h3><p>Analiza datos e identifica patrones para que puedas tomar decisiones informadas.</p><div class="card-bottom"><span>Ideal para analizar</span><span class="tiny-dot"></span></div></article>
+      </div>
+      <div class="center-cta"><a class="text-button" href="/registro">Descubre todas las posibilidades <span>→</span></a></div>
+    </section>
+
+    <section class="how-section" id="como-funciona"><div class="section-wrap how-inner"><div class="how-copy"><div class="eyebrow">SIMPLE DESDE EL PRIMER DÍA</div><h2>Tu idea es el<br><span class="gradient-text">punto de partida.</span></h2><p>No necesitas saber de inteligencia artificial. Solo cuéntale al agente qué necesitas y revisa el resultado con tu propio criterio.</p><a class="button button-outline" href="/registro">Probar ForgeAI <span>↗</span></a></div><div class="steps-list"><div class="step"><span class="step-number">01</span><div><h3>Cuéntale tu objetivo</h3><p>Escribe lo que quieres resolver o crear, con tus propias palabras.</p></div><span class="step-symbol">↗</span></div><div class="step"><span class="step-number">02</span><div><h3>Elige un agente</h3><p>Escoge una especialidad o deja que ForgeAI te sugiera por dónde empezar.</p></div><span class="step-symbol">✳</span></div><div class="step"><span class="step-number">03</span><div><h3>Revisa y dale tu toque</h3><p>Usa la respuesta como punto de partida. La decisión final siempre es tuya.</p></div><span class="step-symbol">✓</span></div></div></div></section>
+
+    <section class="benefits-section section-wrap" id="ventajas"><div class="benefits-heading"><div class="eyebrow">POTENCIA TU FORMA DE TRABAJAR</div><h2>La IA te acompaña.<br><span class="muted-heading">Tú marcas el rumbo.</span></h2></div><div class="benefits-grid"><div class="benefit"><span class="benefit-icon">✧</span><h3>Empieza sin complicarte</h3><p>Una experiencia clara para probar agentes de IA, incluso si es tu primera vez.</p></div><div class="benefit"><span class="benefit-icon">◷</span><h3>Avanza a tu ritmo</h3><p>Deja que la IA te ayude con tareas y reserva tu tiempo para lo que necesita de ti.</p></div><div class="benefit"><span class="benefit-icon">◎</span><h3>Siempre con criterio</h3><p>Revisa las respuestas, aporta tu experiencia y decide cómo usar cada resultado.</p></div></div></section>
+
+    <section class="final-cta section-wrap"><div class="cta-glow"></div><div class="cta-content"><div class="eyebrow"><span class="live-dot"></span> TU SIGUIENTE IDEA TE ESTÁ ESPERANDO</div><h2>¿Qué podrías hacer<br>con un poco de ayuda?</h2><p>Empieza a explorar una forma más simple de trabajar con inteligencia artificial.</p><a href="/registro" class="button">Crear mi cuenta <span>↗</span></a><small>Comienza gratis · Sin experiencia previa</small></div><div class="cta-orbit"><span>✳</span><i></i><b></b></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 29 10.5v11L16 29 3 21.5v-11L16 3Z"/><path d="M11 21V11h11M11 16h8"/></svg></span><span>forge<span class="brand-light">ai</span></span></a><p>La tecnología avanza. Las ideas también.</p><span class="footer-copy">© 2026 ForgeAI</span></footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<div class="row"><h1>Mis agentes</h1><a class="btn" href="/agentes/nuevo">+ Nuevo agente</a></div>
+<% if (agentes.length === 0) { %>
+  <div class="card center"><p>Aún no tienes agentes. ¡Crea el primero!</p></div>
+<% } else { %>
+  <div class="grid">
+    <% agentes.forEach(a => { %>
+      <div class="card">
+        <h3><%= a.nombre %></h3>
+        <p class="muted"><%= a.descripcion %></p>
+        <p><span class="tag"><%= a.estado %></span> <span class="tag"><%= a.nombre_modelo %></span></p>
+        <div class="actions">
+          <a class="btn btn-ghost" href="/agentes/<%= a.id_agente %>">Ver</a>
+          <a class="btn btn-ghost" href="/agentes/<%= a.id_agente %>/editar">Editar</a>
+          <form action="/agentes/<%= a.id_agente %>" method="POST" class="inline" onsubmit="return confirm('¿Eliminar este agente?')">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-danger">Eliminar</button>
+          </form>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+<% } %>
+<%- include('../partials/footer') %>

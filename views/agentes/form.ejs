@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<div class="card narrow">
+  <h1><%= title %></h1>
+  <% if (error) { %><p class="error"><%= error %></p><% } %>
+  <form action="<%= action %>" method="POST">
+    <% if (edit) { %><input type="hidden" name="_method" value="PUT"><% } %>
+    <label>Nombre<input type="text" name="nombre" value="<%= agente.nombre || '' %>" required></label>
+    <label>Descripción<textarea name="descripcion" rows="3" required><%= agente.descripcion || '' %></textarea></label>
+    <label>Modelo de IA
+      <select name="idModelo" required>
+        <% modelos.forEach(m => { %>
+          <option value="<%= m.id_modelo %>" <%= Number(agente.idModelo) === m.id_modelo ? 'selected' : '' %>><%= m.nombre_modelo %> (<%= m.tipo_tarea %>)</option>
+        <% }) %>
+      </select>
+    </label>
+    <label>Estado
+      <select name="estado">
+        <% ['activo','pausado'].forEach(e => { %>
+          <option value="<%= e %>" <%= agente.estado === e ? 'selected' : '' %>><%= e %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" name="soporte_obsidian" <%= agente.soporte_obsidian ? 'checked' : '' %>> Soporte Obsidian</label>
+    <fieldset><legend>Herramientas</legend>
+      <% herramientas.forEach(h => { %>
+        <label class="check"><input type="checkbox" name="herramientas" value="<%= h.id_herramienta %>" <%= seleccionadas.includes(h.id_herramienta) ? 'checked' : '' %>> <%= h.nombre %> <span class="muted">(<%= h.tipo_permiso %>)</span></label>
+      <% }) %>
+    </fieldset>
+    <div class="actions"><button class="btn" type="submit">Guardar</button><a class="btn btn-ghost" href="/agentes">Cancelar</a></div>
+  </form>
+</div>
+<%- include('../partials/footer') %>
